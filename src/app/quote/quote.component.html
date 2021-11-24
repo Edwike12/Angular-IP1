@@ -4,7 +4,7 @@
     <hr>
     <ul>
       <li *ngFor='let Quote of Quotes'>
-        {{Quote.name}}  
+        {{Quote.author}}  
         <app-quote-detail [Quote]='Quote'></app-quote-detail>
       </li>
     </ul>
