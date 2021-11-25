@@ -6,7 +6,7 @@
       <div *ngFor='let quote of quotes;let i = index'>
        <li>{{quote.author}}</li> 
        <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quote-detail *ngIf='quote.showDescription'[Quote]='quote'  (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+        <app-quote-detail *ngIf='quote.showDescription'[Quote]='quote'  (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
       </div>
     </ul>
   </div>
