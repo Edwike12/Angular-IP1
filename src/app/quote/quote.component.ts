@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -7,17 +7,25 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  Quotes:Quote[]=[
-    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son'),
-    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot'),
-    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon'),
-    new Quote(4,'Get Dog Food','Pupper likes expensive snacks'),
-    new Quote(5,'Solve math homework','Damn Math'),
-    new Quote(6,'Plot my world domination plan','Cause I am an evil overlord')
+  quotes:Quote[]=[
+    new Quote(1, 'Dale Carnegie', 'Most of the important things in the world have been accomplished by people who kept on trying when their seemed to be no hope'),
+    new Quote(2,'Maya Angelou','If you are always trying to be normal you will never know how amazing you can be'),
+    
   ];
+
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    }
+
+    completeQuote(isComplete, index){
+      if (isComplete) {
+        this. quotes.splice(index,1);
+      }
+    }
+        
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
