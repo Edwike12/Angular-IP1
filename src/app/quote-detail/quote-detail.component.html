@@ -1,6 +1,11 @@
 <p>
-    {{Quote.description}}
-  </p>
+  {{ Quote.description }}
+</p>
 
-<button (click)= 'quoteComplete(true)'>Complete</button>
-<button (click)= 'quoteDelete(true)'>Delete Quote</button>
+ 
+
+<button (click)="quoteDelete(true)">Delete Quote</button>
+<pre></pre>
+<div>
+  <app-votes></app-votes>
+</div>
