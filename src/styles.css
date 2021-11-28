@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-#h1{
-    color: blue;
+body{
+    border: 10px outset; 
+    background-image: url("https://media.kidadl.com/6047452d09821b6c5d1c827e-shine-quotes-are-make-you-shine-bright.jpeg");
+    
 }
