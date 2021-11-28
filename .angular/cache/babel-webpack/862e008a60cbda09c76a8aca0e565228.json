@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Quote {\n  constructor(author, description, name) {\n    this.author = author;\n    this.description = description;\n    this.name = name;\n    this.showDescription = false;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

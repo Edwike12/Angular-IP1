@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit,Output, } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -6,10 +6,11 @@ import { Quote } from '../quote';
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css']
 })
+
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1, 'Dale Carnegie', 'Most of the important things in the world have been accomplished by people who kept on trying when their seemed to be no hope'),
-    new Quote(2,'Maya Angelou','If you are always trying to be normal you will never know how amazing you can be'),
+    new Quote(1, 'Dale Carnegie', 'Most of the important things in the world have been accomplished by people who kept on trying when their seemed to be no hope','Edwike'),
+    new Quote(2,'Maya Angelou','If you are always trying to be normal you will never know how amazing you can be','Edwike'),
     
   ];
 
@@ -31,6 +32,13 @@ export class QuoteComponent implements OnInit {
           this.quotes.splice(index,1)
         }
       }
+    }
+
+    addNewQuote(quote){
+      let quoteLength = this.quotes.length;
+      quote.id = quoteLength+1;
+      this.quotes.push(quote)
+
     }
         
   constructor() { }
